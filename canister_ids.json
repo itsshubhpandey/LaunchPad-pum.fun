@@ -1,0 +1,17 @@
+{
+  "ic_asset_handler": {
+    "ic": "m2gfi-4qaaa-aaaam-admpa-cai"
+  },
+  "icplaunchpad_backend": {
+    "ic": "oiell-5iaaa-aaaar-qamaq-cai"
+  },
+  "icplaunchpad_frontend": {
+    "ic": "ajzka-lyaaa-aaaak-ak5rq-cai"
+  },
+  "index_canister": {
+    "ic": "dacyq-cqaaa-aaaam-adnla-cai"
+  },
+  "token_deployer": {
+    "ic": "a375z-hiaaa-aaaak-ak5sq-cai"
+  }
+}

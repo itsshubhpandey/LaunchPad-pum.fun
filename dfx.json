@@ -1,0 +1,64 @@
+{
+  "canisters": {
+    "index_canister": {
+      "type": "custom",
+      "candid": "src/index_canister/index_canister.did",
+      "wasm": "src/index_canister/index_canister.wasm.gz"
+    },
+   "internet_identity": {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    },
+      
+    "icplaunchpad_backend": {
+      "main": "src/icplaunchpad_backend/src/lib.rs",
+      "candid": "src/icplaunchpad_backend/icplaunchpad_backend.did",
+      "package": "icplaunchpad_backend",
+      "type": "rust",
+      "optimize":"cycles"
+
+    },
+    "token_deployer": {
+      "type": "custom",
+      "candid": "src/token_deployer/token_deployer.did",
+      "wasm": "src/token_deployer/ic-icrc1-ledger.wasm.gz"
+    },
+    "ic_asset_handler": {
+      "main": "src/ic_asset_handler/src/lib.rs",
+      "candid": "src/ic_asset_handler/ic_asset_handler.did",
+      "package": "ic_asset_handler",
+      "type": "rust"
+    },
+    "icp_ledger_canister": {
+      "type": "custom",
+      "candid": "https://raw.githubusercontent.com/dfinity/ic/08f32722df2f56f1e5c1e603fee0c87c40b77cba/rs/rosetta-api/icp_ledger/ledger.did",
+      "wasm": "https://download.dfinity.systems/ic/08f32722df2f56f1e5c1e603fee0c87c40b77cba/canisters/ledger-canister.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "ryjl3-tyaaa-aaaaa-aaaba-cai"
+        }
+      }
+    },
+    "icplaunchpad_frontend": {
+  "dependencies": [
+    "icplaunchpad_backend"
+  ],
+  "frontend": {
+    "entrypoint": "src/icplaunchpad_frontend/src/index.html"
+  },
+  "source": [
+    "dist/icplaunchpad_frontend/"
+  ],
+  "type": "assets"
+}
+
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
